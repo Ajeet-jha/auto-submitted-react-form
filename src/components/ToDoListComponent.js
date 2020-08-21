@@ -10,7 +10,7 @@ function ToDoListComponent({ name = "abc", desc = "xyz", agree = "yes" }) {
             {name} - {desc} - {agree}
             {
                 isDone ? <DoneListComponent isDone={isDone} name={name} desc={desc} agree={agree} /> :
-                    "so far none is Done"
+                    <p>so far none is Done </p>
             }
 
         </div>

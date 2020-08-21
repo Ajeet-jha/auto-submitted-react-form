@@ -26,7 +26,7 @@ const ToDoComponent = () => {
 
                 <br />
 
-                <input type="text" onChange={(e) => setName(e.target.value)} />
+                <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>
 
                 <br />
 
@@ -34,7 +34,7 @@ const ToDoComponent = () => {
 
                 <br />
 
-                <textarea rows="3" cols="25" onChange={(e) => setDesc(e.target.value)} />
+                <textarea rows="3" cols="25" onChange={(e) => setDesc(e.target.value)} value={desc}/>
 
                 <br />
 
@@ -42,7 +42,7 @@ const ToDoComponent = () => {
 
                 <br />
 
-                <select name="agree" onChange={(e) => setAgree(e.target.value)} >
+                <select name="agree" onChange={(e) => setAgree(e.target.value)} value={agree}>
                     <option value="0">Select one</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -51,7 +51,7 @@ const ToDoComponent = () => {
             {
                 name && desc && agree ?
                     <ToDoListComponent name={name} desc={desc} agree={agree} />
-                    : "please fill first"
+                    : <p>No Task has Been Created</p>
             }
         </>
     );
